@@ -1,0 +1,18 @@
+$gradient-primary: linear-gradient( 135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%))
+    
+body
+    min-height: 100vh
+    background-image: $gradient-primary
+    display: flex
+    flex-direction: column
+
+main
+    display: grid
+    text-align: center
+    grid-template-rows: max-content auto max-content
+    
+.attribution
+    font-size: 11px
+    text-align: center
+    a 
+        color: hsl(228, 45%, 44%)

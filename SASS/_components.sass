@@ -1,0 +1,74 @@
+$gradient-secondary: linear-gradient( 135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%))
+$gradient-primary: linear-gradient( 135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%))
+$desaturated-red: hsl(0, 36%, 70%)
+$soft-red: hsl(0, 93%, 68%)
+
+@keyframes fade 
+    0%,100% 
+        opacity: 0
+    50%
+        opacity: 1
+
+/* Image styling */
+#hero-image
+     width: 100%
+     height: auto
+     object-fit: contain
+
+.company-logo
+    text-align: left
+    padding: 1.2em  
+
+/* Page body styling */
+.page-body
+    padding: 1.5em
+
+    > *
+        margin-top: 1.4em
+
+
+.page-heading 
+    text-transform: uppercase
+    font-size: 3.0rem
+    letter-spacing: 0.9rem
+    
+// Form styling 
+.input-form 
+    margin-top: 3.0em
+    position: relative
+
+#input-field
+    width: 80%
+    border-radius: 20px
+    border: 1px solid black
+    border-color: $desaturated-red
+    padding: 0.9em
+
+.input-button
+    width: 15%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 78%
+    border-radius: 40%
+    border: none
+    background: $gradient-secondary
+
+    &:hover
+        cursor: pointer
+        background-image: linear-gradient(135deg, #f1dada, #f7bbbb)
+
+#error-icon
+    display: none
+    position: absolute
+    top: 20%
+    left: 70%
+    animation: fade 2s linear
+    animation-iteration-count: infinite
+
+#error-warning
+   text-align: left
+   margin-top: 0.6em
+   margin-left: 4em
+   font-size: 0.8rem
+   color: $soft-red
