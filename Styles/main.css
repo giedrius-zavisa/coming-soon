@@ -20,7 +20,7 @@ h2 {
   color: #ce9797;
 }
 
-.input-field {
+#input-field {
   font-weight: 300;
   color: #ce9797;
 }
@@ -50,6 +50,14 @@ main {
   color: #3e52a3;
 }
 
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 /* Image styling */
 #hero-image {
   width: 100%;
@@ -81,7 +89,7 @@ main {
   position: relative;
 }
 
-.input-field {
+#input-field {
   width: 80%;
   border-radius: 20px;
   border: 1px solid black;
@@ -102,6 +110,23 @@ main {
 .input-button:hover {
   cursor: pointer;
   background-image: linear-gradient(135deg, #f1dada, #f7bbbb);
+}
+
+#error-icon {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  animation: fade 2s linear;
+  animation-iteration-count: infinite;
+}
+
+#error-warning {
+  text-align: left;
+  margin-top: 0.6em;
+  margin-left: 4em;
+  font-size: 0.8rem;
+  color: #f96262;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -46,8 +46,9 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
     
-      <form class="input-form">
-        <input class="input-field" type="text" name="email" placeholder="Email Address">
+      <form class="input-form" action="#">
+        <input id="input-field" type="text" name="email" placeholder="Email Address">
+        <img id="error-icon" src="images/icon-error.svg" aria-label="Error">
         <button class="input-button">
           <svg 
           xmlns="http://www.w3.org/2000/svg" 
@@ -63,6 +64,7 @@
         </svg>
         </button>
       </form>
+      <p id="error-warning"></p>
     </div>
     
   </main>
@@ -75,5 +77,7 @@
       Coded by <a href="#">Sypnotick</a>.
     </p>
   </footer>
+
+  <script src="Scripts/main.js"></script>
 </body>
 </html>
