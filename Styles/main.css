@@ -37,9 +37,7 @@ body {
 }
 
 main {
-  display: grid;
   text-align: center;
-  grid-template-rows: max-content auto max-content;
 }
 
 .attribution {
@@ -50,6 +48,25 @@ main {
   color: #3e52a3;
 }
 
+@media only screen and (min-width: 764px) {
+  body {
+    background-image: url("../images/bg-pattern-desktop.svg");
+  }
+
+  main {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 63vw auto;
+    grid-template-rows: 5vh 95vh;
+    grid-template-areas: "header hero" "body .";
+    justify-content: center;
+    align-conter: center;
+  }
+
+  .attribution {
+    grid-area: footer;
+  }
+}
 @keyframes fade {
   0%, 100% {
     opacity: 0;
@@ -65,11 +82,28 @@ main {
   object-fit: contain;
 }
 
+@media only screen and (min-width: 768px) {
+  #hero-image {
+    width: 100%;
+    grid-area: hero;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+}
 .company-logo {
   text-align: left;
   padding: 1.2em;
 }
 
+@media only screen and (min-width: 768px) {
+  .company-logo {
+    grid-area: header;
+    margin-left: 12em;
+    margin-top: 5em;
+  }
+}
 /* Page body styling */
 .page-body {
   padding: 1.5em;
@@ -78,6 +112,14 @@ main {
   margin-top: 1.4em;
 }
 
+@media only screen and (min-width: 768px) {
+  .page-body {
+    grid-area: body;
+    padding: 13em;
+    text-align: left;
+    align-self: center;
+  }
+}
 .page-heading {
   text-transform: uppercase;
   font-size: 3rem;
@@ -112,6 +154,11 @@ main {
   background-image: linear-gradient(135deg, #f1dada, #f7bbbb);
 }
 
+@media only screen and (min-width: 768px) {
+  .input-button {
+    left: 70%;
+  }
+}
 #error-icon {
   display: none;
   position: absolute;
@@ -127,6 +174,16 @@ main {
   margin-left: 4em;
   font-size: 0.8rem;
   color: #f96262;
+}
+
+@media only screen and (min-width: 768px) {
+  #error-icon {
+    margin-left: -2em;
+  }
+
+  #error-warning {
+    margin-left: 1em;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
