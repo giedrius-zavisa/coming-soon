@@ -7,12 +7,27 @@ body
     flex-direction: column
 
 main
-    display: grid
     text-align: center
-    grid-template-rows: max-content auto max-content
+        
     
 .attribution
     font-size: 11px
     text-align: center
     a 
         color: hsl(228, 45%, 44%)
+
+@media only screen and (min-width: 764px)
+    body
+        background-image: url("../images/bg-pattern-desktop.svg")
+
+    main
+        overflow: hidden
+        display: grid
+        grid-template-columns: 63vw auto
+        grid-template-rows: 5vh 95vh
+        grid-template-areas: 'header hero' 'body .'
+        justify-content: center
+        align-conter: center
+
+    .attribution 
+        grid-area: footer

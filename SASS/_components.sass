@@ -15,9 +15,24 @@ $soft-red: hsl(0, 93%, 68%)
      height: auto
      object-fit: contain
 
+@media only screen and (min-width: 768px)
+    #hero-image
+        width: 100%
+        grid-area: hero
+
+    .image-container
+        width: 100%
+
 .company-logo
     text-align: left
     padding: 1.2em  
+
+@media only screen and (min-width: 768px)
+    .company-logo
+        grid-area: header
+        margin-left: 12em
+        margin-top: 5em
+
 
 /* Page body styling */
 .page-body
@@ -25,6 +40,13 @@ $soft-red: hsl(0, 93%, 68%)
 
     > *
         margin-top: 1.4em
+
+@media only screen and (min-width: 768px)
+    .page-body
+        grid-area: body
+        padding: 13.0em
+        text-align: left
+        align-self: center
 
 
 .page-heading 
@@ -58,6 +80,11 @@ $soft-red: hsl(0, 93%, 68%)
         cursor: pointer
         background-image: linear-gradient(135deg, #f1dada, #f7bbbb)
 
+@media only screen and (min-width: 768px)
+    .input-button
+        left: 70%
+        
+
 #error-icon
     display: none
     position: absolute
@@ -72,3 +99,10 @@ $soft-red: hsl(0, 93%, 68%)
    margin-left: 4em
    font-size: 0.8rem
    color: $soft-red
+
+@media only screen and (min-width: 768px)
+    #error-icon
+        margin-left: -2em
+
+    #error-warning
+        margin-left: 1em
