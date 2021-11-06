@@ -15,12 +15,17 @@
 <body>
 
   <main class="container">
+
+    <h1 class="sr-only">Store newsletter page</h1>
+
     <!-- Main company logo -->
     <div class="company-logo">
       <svg 
       xmlns="http://www.w3.org/2000/svg" 
       width="158" 
-      height="33">
+      height="33"
+      aria-hidden="true"
+      >
       <defs>
         <linearGradient id="a" x1="0%" y1="0%" y2="100%">
         <stop offset="0%" stop-color="#F8BFBF"/>
@@ -54,12 +59,13 @@
     
       <form class="input-form" action="#">
         <input id="input-field" type="text" name="email" placeholder="Email Address">
-        <img id="error-icon" src="images/icon-error.svg" aria-label="Error">
+        <img id="error-icon" src="images/icon-error.svg" alt="error">
         <button class="input-button">
           <svg 
           xmlns="http://www.w3.org/2000/svg" 
           width="12" 
           height="20"
+          aria-label="Submit email address"
           >
           <path 
           fill="none" 
