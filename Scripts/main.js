@@ -10,8 +10,11 @@ inputButton.addEventListener('click', function() {
         return false;
     }
 
+    inputField.preventDefaul();
+
     if(validateEmail(inputField.value)) {
-        return true;
+        inputField.removeAttribute('aria-invalid');
+        inputField.removeAttribute('aria-describedBy');
     }
     else {
         invalidEmail();
@@ -25,7 +28,13 @@ const validateEmail = function(email) {
 }
 
 const invalidEmail = function() {
+
+    // Set visual elements
     inputField.style.borderColor = "red";
     errorIcon.style.display = "block";
     errorWarning.textContent = "Invalid Email";
+
+    // Set aria attributes
+    inputField.setAttribute('aria-invalid', true);
+    inputField.setAttribute('aria-describedBy', errorWarning.textContent);
 }
