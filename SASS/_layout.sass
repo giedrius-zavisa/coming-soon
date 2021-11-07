@@ -3,8 +3,6 @@ $gradient-primary: linear-gradient( 135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%)
 body
     min-height: 100vh
     background-image: $gradient-primary
-    display: flex
-    flex-direction: column
 
 main
     text-align: center
@@ -32,11 +30,10 @@ main
         background-image: url("../images/bg-pattern-desktop.svg"), $gradient-primary
 
     main
-        overflow: hidden
         display: grid
-        grid-template-columns: 63vw auto
-        grid-template-rows: 5vh 95vh
-        grid-template-areas: 'header hero' 'body .'
+        grid-template-columns: 58em 37em
+        grid-template-rows: 10em 20em
+        grid-template-areas: 'header hero' 'body hero'
         justify-content: center
         align-conter: center
 
